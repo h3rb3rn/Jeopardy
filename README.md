@@ -1,8 +1,8 @@
 Depotwarehouse.net's Jeopardy Player
 =====================================
 
-This is a full-featured web application that allows a group of super-best-friends to play [Jeopardy!](http://www.jeopardy.com/) 
-games with each other. The application is implemented using [ReactPHP](http://reactphp.org/) and websockets.
+This is a full-featured web application that allows a group of super-best-friends to play [Jeopardy!](https://www.jeopardy.com/) 
+games with each other. The application is implemented using [ReactPHP](https://reactphp.org/) and websockets.
 
 Installation
 -------------
@@ -17,7 +17,7 @@ file.
 
 You will need to supply a `questions.json` file and put it in `game_data/`. You can generate one of these files using 
 our [jeopardy-parser](https://github.com/tpavlek/jeopardy-parser) application. Using this you can quickly get up and running
-with any game of Jeopardy recorded on [j-archive.com](http://j-archive.com) (all of them). This software ships with a 
+with any game of Jeopardy recorded on [j-archive.com](https://j-archive.com) (all of them). This software ships with a 
 `questions.json` from a Teen Tournament episode of Jeopardy.
 
 Finally, you need to start the websocket server. In the application directory run 
@@ -121,7 +121,7 @@ Demo
 
 This system was built for a project called [Starcraft Jeopardy](https://sc2ctl.com/jeopardy). If you would like to see the system in action you can view one of those episodes:
 
-* [Episode 1](http://vods.sc2ctl.com/vod/2015/03/10/jeopardy-one-fenner-jackson-gemini/).
+* [Episode 1](https://vods.sc2ctl.com/vod/2015/03/10/jeopardy-one-fenner-jackson-gemini/).
 
 Testing
 --------
