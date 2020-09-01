@@ -48,7 +48,7 @@ html,
 input,
 select,
 textarea {
-    font-family: sans-serif
+    font-family: "Rubik"
 }
 
 body {
@@ -304,7 +304,7 @@ table {
     *letter-spacing: normal;
     *word-spacing: -.43em;
     text-rendering: optimizespeed;
-    font-family: FreeSans, Arimo, Droid Sans, Helvetica, Arial, sans-serif;
+    font-family: FreeSans, Arimo, Droid Sans, Helvetica, Arial, "Rubik";
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
     display: -ms-flexbox;
@@ -327,7 +327,7 @@ table {
 }
 
 .pure-g [class*=pure-u] {
-    font-family: sans-serif
+    font-family: "Rubik"
 }
 
 .pure-u-1,
@@ -1015,7 +1015,7 @@ a.pure-button-selected {
 .pure-menu-can-have-children>.pure-menu-label:after {
     content: '\25B8';
     float: right;
-    font-family: Lucida Grande, Lucida Sans Unicode, DejaVu Sans, sans-serif;
+    font-family: Lucida Grande, Lucida Sans Unicode, DejaVu Sans, "Rubik";
     margin-right: -20px;
     margin-top: -1px
 }
@@ -1217,7 +1217,7 @@ a.pure-button-selected {
 
 .pure-table caption {
     color: #000;
-    font: normal 85%/1 arial, sans-serif;
+    font: normal 85%/1 arial, "Rubik";
     padding: 1em 0;
     text-align: center
 }
@@ -1435,7 +1435,7 @@ a.pure-button-selected {
 }
 
 .pure-form {
-    font-family: Rubik, sans-serif
+    font-family: Rubik, "Rubik"
 }
 
 .pure-form .pure-control-group {
@@ -1458,7 +1458,7 @@ a.pure-button-selected {
 }
 
 .pure-form label {
-    font-family: Rubik, sans-serif;
+    font-family: Rubik, "Rubik";
     font-size: 110%
 }
 
