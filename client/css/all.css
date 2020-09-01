@@ -1281,7 +1281,7 @@ a.pure-button-selected {
     box-sizing: border-box;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 115%;
+    font-size: 200%;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
@@ -1538,7 +1538,7 @@ html,
 input,
 select,
 textarea {
-    font-family: Rubik\ 27px, serif
+    font-family: Rubik 36px;
 }
 
 .buzzer-column {
@@ -1752,10 +1752,10 @@ span.active-buzzer:after {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    text-transform: uppercase;
-    color: #fff;
+    #text-transform: uppercase;
+    color: #000;
     font-weight: 700;
-    font-size: 38px
+    font-size: 30px
 }
 
 .category-name span {
@@ -1824,12 +1824,13 @@ span.active-buzzer:after {
 
 .answer,
 .answer .content {
+    color: #000;
     font-size: 200%;
-    background: #6bacfa !important
+    background: #aaa6a9 !important
 }
 
 .flex-ender {
-    color: #202899;
+    color: #d7d7d7;
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
@@ -1863,7 +1864,8 @@ span.active-buzzer:after {
     width: calc(100% - 20rem);
     left: 20rem;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    color: #000;
+    background: #d7d7d7;
     padding: 3rem 2rem
 }
 
@@ -1871,8 +1873,8 @@ span.active-buzzer:after {
     text-align: center;
     height: 100%;
     padding: 2rem;
-    color: #fff;
-    background: #202899;
+    color: #000;
+    background: #d7d7d7;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center
@@ -1935,7 +1937,7 @@ span.active-buzzer:after {
     width: 100%;
     padding: 2rem;
     color: #fff;
-    background: #202899;
+    background: #d7d7d7;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1970,7 +1972,7 @@ span.active-buzzer:after {
     width: 100%;
     padding: 2rem;
     color: #fff;
-    background: #202899;
+    background: #d7d7d7;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
