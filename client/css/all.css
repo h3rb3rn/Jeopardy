@@ -48,7 +48,7 @@ html,
 input,
 select,
 textarea {
-    font-family: "Rubik"
+    /*! font-family: "Rubik"; */
 }
 
 body {
@@ -1721,7 +1721,7 @@ span.active-buzzer:after {
 }
 
 .score {
-    font-size: 200%;
+    font-size: 130%;
     font-weight: 700
 }
 
@@ -1866,7 +1866,7 @@ span.active-buzzer:after {
     height: 100%;
     color: #000;
     background: #d7d7d7;
-    padding: 3rem 2rem
+    padding: 3rem 2rem;
 }
 
 #question-display-modal .content {
@@ -1907,7 +1907,10 @@ span.active-buzzer:after {
 }
 
 #question-display-modal .clue span {
-    display: block
+    max-width: 100%;
+    height: auto;
+    font-size: 300%;
+    display: inline-block
 }
 
 #question-display-modal .clue img {
