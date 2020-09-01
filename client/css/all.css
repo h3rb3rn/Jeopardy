@@ -1281,7 +1281,7 @@ a.pure-button-selected {
     box-sizing: border-box;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 200%;
+    font-size: 100%;
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
