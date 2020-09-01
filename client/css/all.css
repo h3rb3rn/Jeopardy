@@ -1795,7 +1795,7 @@ span.active-buzzer:after {
 }
 
 .jeopardy-board .category .question.box {
-    text-shadow: 5px 5px 5px #d7d7d7;
+    #text-shadow: 5px 5px 5px #d7d7d7;
     color: #040000;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1825,7 +1825,7 @@ span.active-buzzer:after {
 .answer,
 .answer .content {
     color: #000;
-    font-size: 200%;
+    font-size: 150%;
     background: #aaa6a9 !important
 }
 
@@ -1877,7 +1877,8 @@ span.active-buzzer:after {
     background: #d7d7d7;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    /*! font-size: 150%; */
 }
 
 #question-display-modal .clue,
@@ -1910,8 +1911,8 @@ span.active-buzzer:after {
 }
 
 #question-display-modal .clue img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100;
+    max-height: 100%;
     margin: 0 auto
 }
 
