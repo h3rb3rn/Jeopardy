@@ -13,7 +13,7 @@ window.jeopardy = (function (jeopardy, buzzer, question) {
     jeopardy.final_jeopardy_responses_topic = "com.sc2ctl.jeopardy.final_jeopardy_responses";
     jeopardy.final_jeopardy_answer_topic = "com.sc2ctl.jeopardy.final_jeopardy_answers";
 
-    jeopardy.host = 'wss://' + window.location.hostname + '/ws';
+    jeopardy.host = 'ws://' + 'localhost:9001' + '/ws';
     jeopardy.buzz_display_time = 4500;
     jeopardy.admin_mode = false; // Sets admin mode, which will disable feedback like penalties, buzzbuttons, etc.
 
@@ -225,6 +225,15 @@ window.jeopardy = (function (jeopardy, buzzer, question) {
         }
     }
 
+    function updateContestants(contestants) {
+        contestants.forEach(
+            function (contestant) {
+                debugger;
+                $('.player.' + contestant.name).css('background-color', contestant.color)
+            }
+        );
+    }
+
     /**
      * This function is called whenever we recieve any information in the question display topic.
      *
@@ -237,9 +246,14 @@ window.jeopardy = (function (jeopardy, buzzer, question) {
     function handleQuestionDisplay(topic, data)
     {
         data = JSON.parse(data);
+
+        if (data.contestants instanceof Array) {
+            updateContestants(data.contestants)
+        }
+
         // If we have recieved an array back, we're just starting up and want to populate the board with questions.
-        if (data instanceof Array) {
-            populateBoard(data);
+        if (data.categories instanceof Array) {
+            populateBoard(data.categories);
             return;
         }
 
@@ -529,6 +543,7 @@ window.jeopardy = (function (jeopardy, buzzer, question) {
             $(category_column).attr('data-category', category_data.name);
             var category_box = $(category_column).find('.category-name');
             category_box.html("<span>" + category_data.name + "</span>")
+            category_box.css("background-color", category_data.color);
 
             var questions_column = $(category_column).find('.question.box');
 

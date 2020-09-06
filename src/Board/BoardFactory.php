@@ -66,6 +66,7 @@ class BoardFactory
             function (\stdClass $category) {
                 return new Category(
                     $category->name,
+                        isset($category->color) ? $category->color: '',
                     array_map(
                         function (\stdClass $question) {
                             $questionObj = new Question(
@@ -82,6 +83,7 @@ class BoardFactory
                         },
                         $category->questions
                     )
+
                 );
             }, $values->categories
         );

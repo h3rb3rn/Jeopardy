@@ -84,7 +84,7 @@ class Server
         );
 
         $emitter->addListener(QuestionSubscriptionEvent::class, function(QuestionSubscriptionEvent $event) use ($wamp, $board) {
-            $wamp->onQuestionSubscribe($board->getCategories(), $event->getSessionId());
+            $wamp->onQuestionSubscribe($board->getCategories(), $board->getContestants(), $event->getSessionId());
         });
 
         $emitter->addListener(ContestantScoreSubscriptionEvent::class, function(ContestantScoreSubscriptionEvent $event) use ($wamp, $board) {

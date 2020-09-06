@@ -11,12 +11,16 @@ class Contestant implements Arrayable, Jsonable
     /** @var  string */
     protected $name;
 
+    /** @var string */
+    private $color;
+
     protected $score;
 
-    public function __construct($name, $score = 0)
+    public function __construct($name, $color, $score = 0)
     {
         $this->name = $name;
         $this->score = $score;
+        $this->color = $color;
     }
 
     /**
@@ -35,6 +39,11 @@ class Contestant implements Arrayable, Jsonable
         return $this->score;
     }
 
+    public function getColor()
+    {
+        return $this->color;
+    }
+
     public function addScore($value)
     {
         $this->score += $value;
@@ -50,6 +59,7 @@ class Contestant implements Arrayable, Jsonable
     {
         return [
             'name' => $this->getName(),
+            'color' => $this->getColor(),
             'score' => $this->getScore()
         ];
     }

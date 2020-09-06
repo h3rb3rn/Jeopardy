@@ -14,13 +14,18 @@ class Category implements Arrayable
     /** @var Collection */
     protected $questions;
 
+    /** @var string */
+    protected $color;
+
     /**
-     * @param $name
+     * @param            $name
      * @param Question[] $questions
+     * @param string     $color
      */
-    function __construct($name, array $questions)
+    function __construct($name, $color, array $questions)
     {
         $this->name = $name;
+        $this->color = $color;
         $this->questions = new Collection($questions);
     }
 
@@ -30,6 +35,14 @@ class Category implements Arrayable
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    private function getColor()
+    {
+        return $this->color;
     }
 
     public function getQuestions()
@@ -71,6 +84,7 @@ class Category implements Arrayable
     {
         return [
             'name' => $this->getName(),
+            'color' => $this->getColor(),
             'questions' => $this->getQuestions()->map(function(Question $question) {
                 return $question->toArray();
             })->toArray()

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo service ssh start
+sudo apache2-foreground

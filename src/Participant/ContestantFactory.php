@@ -15,7 +15,8 @@ class ContestantFactory
     {
         $name = ucfirst(strtolower($object->name));
         $score = (isset($object->score) ? $object->score : 0);
-        return new Contestant($name, $score);
+        $color = (isset($object->color) ? $object->color : '');
+        return new Contestant($name, $color, $score);
     }
 
 }

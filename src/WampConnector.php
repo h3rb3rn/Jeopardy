@@ -341,17 +341,24 @@ class WampConnector implements WampServerInterface
      * active questions.
      *
      * @param Collection $categories A collection which contains Category objects.
-     * @param string $sessionId The session ID of the user who subscribed.
+     * @param Collection $contestants A collection of Contestants
+     * @param string     $sessionId  The session ID of the user who subscribed.
      */
-    public function onQuestionSubscribe(Collection $categories, $sessionId)
+    public function onQuestionSubscribe(Collection $categories, Collection $contestants, $sessionId)
     {
         if (!array_key_exists(self::QUESTION_DISPLAY_TOPIC, $this->subscribedTopics)) {
             return;
         }
 
-        $response = $categories->map(function (Category $category) {
+        $categories = $categories->map(static function (Category $category) {
             return $category->toArray();
-        })->toJson();
+        })->toArray();
+
+        $contestants = $contestants->map(static function (Contestant $contestant) {
+            return $contestant->toArray();
+        })->toArray();
+
+        $response = Collection::make(['categories' => $categories, 'contestants'=> $contestants])->toJson();
 
         $this->subscribedTopics[self::QUESTION_DISPLAY_TOPIC]->broadcast($response, [ ], [ $sessionId ]);
     }
